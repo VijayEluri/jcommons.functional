@@ -32,4 +32,16 @@ public class SumTest
     assertEquals(sum.execute(0L, -11L), Long.valueOf(-11L));
     assertEquals(sum.execute(sum.execute(4L, 3L), 1L), Long.valueOf(8L));
   }
+
+
+  /** check Double implementation as well */
+  @Test
+  public void testExecuteDouble() {
+    DoubleSum sum = new DoubleSum();
+    assertEquals(sum.execute(0.0, 1.0), Double.valueOf(1L));
+    assertEquals(sum.execute(1.3, 1.7), Double.valueOf(3L));
+    assertEquals(sum.execute(1.75, 1.25), Double.valueOf(3L));
+    assertEquals(sum.execute(0.0, -11.0), Double.valueOf(-11L));
+    assertEquals(sum.execute(sum.execute(3.5, 3.5), 1.0), Double.valueOf(8L));
+  }
 }
