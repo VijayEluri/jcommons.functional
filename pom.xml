@@ -1,4 +1,5 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.jcommons</groupId>
   <artifactId>jcommons-functional</artifactId>
@@ -7,11 +8,11 @@
   <description>Java Common Libraries Extensions / Functional Programming Assets</description>
   <url>http://www.jcommons.org</url>
   <scm>
-  	<developerConnection>Thorsten Göckeler</developerConnection>
-  	<url>http://github.com/goeckeler/jcommons.functional</url>
+    <developerConnection>Thorsten Göckeler</developerConnection>
+    <url>http://github.com/goeckeler/jcommons.functional</url>
   </scm>
 
- <!-- Global settings -->
+  <!-- Global settings -->
   <properties>
     <!-- default JDK version to be used -->
     <jdk.version>1.7</jdk.version>
@@ -25,6 +26,9 @@
 
 
   <build>
+    <!-- most common used command to run maven, so you can just hit "mvn" instead of "mvn clean install" -->
+    <defaultGoal>clean install</defaultGoal>
+
     <plugins>
       <!-- compiler setup -->
       <plugin>
@@ -38,14 +42,14 @@
       </plugin>
     </plugins>
   </build>
-  
+
   <dependencies>
-  	<dependency>
-  		<groupId>junit</groupId>
-  		<artifactId>junit</artifactId>
-  		<version>4.11</version>
-  		<type>jar</type>
-  		<scope>test</scope>
-  	</dependency>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.11</version>
+      <type>jar</type>
+      <scope>test</scope>
+    </dependency>
   </dependencies>
 </project>
