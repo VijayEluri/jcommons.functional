@@ -18,7 +18,7 @@ public interface NaryPredicate<T>
    * @param arguments the arguments
    * @return true, if the predicate evaluates correctly; otherwise false
    */
-  boolean execute(T... arguments);
+  boolean execute(@SuppressWarnings("unchecked") T... arguments);
 
   /**
    * Executes the predicate with the given list of arguments.

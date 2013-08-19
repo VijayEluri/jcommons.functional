@@ -66,6 +66,7 @@ public final class Functions
    * @param <R> template for the return class
    * @param <T> template for the object class
    */
+  @SafeVarargs
   public static <R, T> void forEach(final UnaryFunction<R, T> function, final T... list) {
     if (list == null || function == null) return;
     forEach(function, Arrays.asList(list));
@@ -104,6 +105,7 @@ public final class Functions
    * @return a corresponding list containing the respective results, can be null if the list is null. Will be empty if
    *         no function is defined.
    */
+  @SafeVarargs
   public static <R, T> List<R> map(final UnaryFunction<R, T> function, final T... list) {
     if (list == null) return null;
     return map(function, Arrays.asList(list));
@@ -138,6 +140,7 @@ public final class Functions
    * @param <T> template for the object class
    * @return true if at least one element meets the predicate, otherwise false
    */
+  @SafeVarargs
   public static <T> boolean some(final UnaryPredicate<T> predicate, final T... list) {
     if (list == null || predicate == null) return false;
     return some(predicate, Arrays.asList(list));
@@ -172,6 +175,7 @@ public final class Functions
    * @param <T> template for the object class
    * @return true if all elements meets the predicate, otherwise false
    */
+  @SafeVarargs
   public static <T> boolean every(final UnaryPredicate<T> predicate, final T... list) {
     if (list == null || predicate == null) return false;
     return every(predicate, Arrays.asList(list));
@@ -214,6 +218,7 @@ public final class Functions
    * @return the list of elements that meet the predicate. If no function is defined, all items will be returned. If the
    *         list is null, null will be returned.
    */
+  @SafeVarargs
   public static <T> List<T> filter(final UnaryPredicate<T> predicate, final T... list) {
     if (list == null) return null;
     return filter(predicate, Arrays.asList(list));
@@ -241,6 +246,7 @@ public final class Functions
    * @return the single element that is left after reduction of all other ones. Will be null if the list is null or no
    *         function is given.
    */
+  @SafeVarargs
   public static <T> T resolve(final BinaryFunction<T, T> function, final T... list) {
     if (list == null || function == null) return null;
     return resolve(function, Arrays.asList(list));
@@ -285,6 +291,7 @@ public final class Functions
    * @return the single element that is left after reduction of all other ones. Will be null if the list is null or no
    *         function is given.
    */
+  @SafeVarargs
   public static <T> T resolve(final T initial, final BinaryFunction<T, T> function, final T... list) {
     if (list == null || function == null) return null;
     return resolve(initial, function, Arrays.asList(list));
@@ -316,6 +323,7 @@ public final class Functions
    * @return the single element that is left after reduction of all other ones. Will be null if the list is null or no
    *         function is given.
    */
+  @SafeVarargs
   public static <T> T reduce(final BinaryFunction<T, T> function, final T... list) {
     if (list == null || function == null) return null;
     return resolve(function, Arrays.asList(list));
@@ -349,6 +357,7 @@ public final class Functions
    * @return the single element that is left after reduction of all other ones. Will be null if the list is null or no
    *         function is given.
    */
+  @SafeVarargs
   public static <T> T reduce(final T initial, final BinaryFunction<T, T> function, final T... list) {
     if (list == null || function == null) return null;
     return resolve(initial, function, Arrays.asList(list));
