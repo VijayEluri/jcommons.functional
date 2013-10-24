@@ -1,5 +1,4 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
   <!-- required to stage artifacts to Sonatype OSS -->
@@ -99,13 +98,6 @@
           <value>true</value>
         </property>
       </activation>
-
-      <properties>
-        <!-- GPG Key ID to use for signing -->
-        <gpg.keyname>F884AEA1</gpg.keyname>
-        <!-- release manager -->
-        <release.username>goeckeler</release.username>
-      </properties>
 
       <!-- automatically sign artifacts on release -->
       <build>
