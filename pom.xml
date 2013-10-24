@@ -18,7 +18,7 @@
   <url>http://www.jcommons.org</url>
   <scm>
     <url>https://github.com/goeckeler/jcommons.functional</url>
-    <connection>scm:git:git@github.com/goeckeler:jcommons.functional.git</connection>
+    <connection>scm:git:git@github.com:goeckeler/jcommons.functional.git</connection>
     <developerConnection>scm:git:git@github.com:goeckeler/jcommons.functional.git</developerConnection>
   </scm>
 
