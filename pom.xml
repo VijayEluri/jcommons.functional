@@ -4,12 +4,15 @@
   <groupId>org.jcommons</groupId>
   <artifactId>jcommons-functional</artifactId>
   <version>1.0.0</version>
+  <packaging>jar</packaging>
+  
   <name>jcommons.functional</name>
   <description>Java Common Libraries Extensions / Functional Programming Assets</description>
   <url>http://www.jcommons.org</url>
   <scm>
-    <developerConnection>Thorsten Göckeler</developerConnection>
     <url>http://github.com/goeckeler/jcommons.functional</url>
+    <connection>https://github.com/goeckeler/jcommons.functional.git</connection>
+    <developerConnection>https://github.com/goeckeler/jcommons.functional.git</developerConnection>
   </scm>
 
   <!-- Global settings -->
@@ -23,7 +26,6 @@
     <!-- source file encoding for all files -->
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
-
 
   <build>
     <!-- most common used command to run maven, so you can just hit "mvn" instead of "mvn clean install" -->
@@ -52,4 +54,20 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
+  
+  <licenses>
+    <license>
+      <name>The Apache Software License, Version 2.0</name>
+      <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+  
+  <developers>
+    <developer>
+      <id>goeckeler</id>
+      <name>Thorsten Göckeler</name>
+      <email>webmaster@jcommons.org</email>
+    </developer>
+  </developers>
 </project>
